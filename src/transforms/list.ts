@@ -83,7 +83,7 @@ export default {
 		const listStarters = lines
 			.map((line, i) => [line, i] as const)
 			.filter(([line, i]) =>
-				isListLine(line) && (i === 0 || !isListLine(lines[i])));
+				isListLine(line) && (i === 0 || !isListLine(lines[i - 1])));
 		const lists = listStarters.map(([_, i]) => {
 			const after = lines.slice(i);
 			const end = after.findIndex((line) => !isListLine(line));
