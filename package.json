@@ -33,5 +33,6 @@
     "README.md",
     "README.zh.md",
     "LICENSE"
-  ]
+  ],
+  "repository": "github:LesBoys43/wikitext2html"
 }
