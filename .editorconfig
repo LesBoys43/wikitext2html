@@ -1,0 +1,5 @@
+end_of_line = lf
+
+[src/**/*.ts]
+indent_style = tab
+indent_size = 4

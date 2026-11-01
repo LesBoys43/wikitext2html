@@ -1,0 +1,37 @@
+{
+  "name": "wikitext2html",
+  "version": "1.0.0",
+  "description": "Simple dependency-free MediaWiki Wikitext to HTML renderer",
+  "keywords": [
+    "wikitext",
+    "wikitext-parser",
+    "wikitext-to-html",
+    "mediawiki",
+    "mediawiki-markup"
+  ],
+  "license": "BSD-3-Clause",
+  "author": "LBLaiSiNanHai <lesboyspp43@outlook.com>",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@typescript-eslint/parser": "^8.72.1",
+    "eslint": "8.57.0",
+    "eslint-config-wikimedia": "^0.32.6",
+    "tsup": "^9.0.0",
+    "typescript": "^5.9.3"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ]
+}
