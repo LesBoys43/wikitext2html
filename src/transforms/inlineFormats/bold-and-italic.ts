@@ -1,1 +1,1 @@
-export default {priority: 3, fence: "'''", element: ['strong', 'em']};
+export default {priority: 2, fence: "'''''", element: ['strong', 'em']};
