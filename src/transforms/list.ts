@@ -92,8 +92,10 @@ export default {
 			return {lines: after.slice(0, relEnd), start: i, end};
 		});
 		let out = current;
-		for (const list of lists)
+		for (let k = lists.length - 1; k >= 0; k--) {
+			const list = lists[k];
 			out = replaceLines(out, list.start, list.end, transformSingleList(list.lines));
+		}
 		return out;
 	},
 };
