@@ -87,8 +87,8 @@ export default {
 		const lists = listStarters.map(([_, i]) => {
 			const after = lines.slice(i);
 			const firstRelNonListLine = after.findIndex((line) => !isListLine(line));
-			const relEnd = (firstRelNonListLine === -1 ? after.length : firstRelNonListLine)
-			const end = i + relEnd - 1
+			const relEnd = (firstRelNonListLine === -1 ? after.length : firstRelNonListLine);
+			const end = i + relEnd - 1;
 			return {lines: after.slice(0, relEnd), start: i, end};
 		});
 		let out = current;
