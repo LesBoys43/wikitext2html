@@ -31,7 +31,7 @@ export default {
 			for (const inlineFormat of INLINE_FORMATS) {
 				const fence = escapeForRegExp(inlineFormat.fence);
 				const {opening, closing} = buildElStr(inlineFormat.element);
-				newLine = newLine.replace(new RegExp(`${fence}([^${fence[0]}]+.*)${fence}`), `${opening}$1${closing}`);
+				newLine = newLine.replace(new RegExp(`${fence}([^${fence[0]}]+.*)${fence}`, 'g'), `${opening}$1${closing}`);
 			}
 			return newLine;
 		}));
