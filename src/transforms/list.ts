@@ -79,7 +79,7 @@ function transformSingleList(doc: string[]): string {
 
 export default {
 	priority: 0,
-	function: function transformList(current: string, _: Options): string {
+	function: function transformList(current: string, _: Required<Options>): string {
 		const lines = toLines(current);
 		const listStarters = lines
 			.map((line, i) => [line, i] as const)

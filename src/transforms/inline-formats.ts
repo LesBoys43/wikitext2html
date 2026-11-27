@@ -26,7 +26,7 @@ function buildElStr(el: string | string[]): {opening: string; closing: string} {
 
 export default {
 	priority: 999,
-	function: function transformInlineFormats(current: string, _: Options): string {
+	function: function transformInlineFormats(current: string, _: Required<Options>): string {
 		return fromLines(toLines(current).map((line) => {
 			let newLine = line;
 			for (const inlineFormat of INLINE_FORMATS) {

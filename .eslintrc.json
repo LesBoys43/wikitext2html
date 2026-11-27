@@ -57,6 +57,7 @@
         "es-x/no-top-level-await": "off",
         "es-x/no-import-meta": "off",
         "es-x/no-array-prototype-toreversed": "off",
+        "es-x/no-string-prototype-replaceall": "off",
         "@typescript-eslint/no-this-alias": [
             "error",
             {
