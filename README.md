@@ -49,10 +49,10 @@ You can provide an option object to second argument of `wikitextToHtml()` to cus
 - Lists
 - Advanced lists
 - External URL
+- Internal link (configurable template)
 
 ### Next (Expected be implemented within 3 versions)
 
-- Internal URL (Configurable base)
 - Tables
 
 ### Future
