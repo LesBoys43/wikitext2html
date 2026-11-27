@@ -1,8 +1,9 @@
+import {Options} from '..';
 import {fromLines, toLines} from '../utils';
 
 export default {
 	priority: 1,
-	function: function transformTitles(current: string): string {
+	function: function transformTitles(current: string, _: Options): string {
 		return fromLines(toLines(current).map((line) => {
 			const titleStart = line.match(/^(={1,6})[^=]+.*/);
 			if (!titleStart) return line;

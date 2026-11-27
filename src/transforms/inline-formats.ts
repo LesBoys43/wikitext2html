@@ -8,6 +8,7 @@ import {escapeForRegExp, fromLines, toLines} from '../utils';
 import bold from './inlineFormats/bold';
 import italic from './inlineFormats/italic';
 import boldAndItalic from './inlineFormats/bold-and-italic';
+import {Options} from '..';
 
 const INLINE_FORMATS: InlineFormat[] = [
 	bold,
@@ -25,7 +26,7 @@ function buildElStr(el: string | string[]): {opening: string; closing: string} {
 
 export default {
 	priority: 999,
-	function: function transformInlineFormats(current: string): string {
+	function: function transformInlineFormats(current: string, _: Options): string {
 		return fromLines(toLines(current).map((line) => {
 			let newLine = line;
 			for (const inlineFormat of INLINE_FORMATS) {

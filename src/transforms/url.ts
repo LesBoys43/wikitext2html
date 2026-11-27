@@ -1,3 +1,4 @@
+import {Options} from '..';
 import {fromLines, toLines} from '../utils';
 
 // eslint-disable-next-line prefer-regex-literals
@@ -5,7 +6,7 @@ const URL_RE = new RegExp(String.raw`\[(https?://(?:(?:(?:[a-z0-9](?:(?:)|(?:[a-
 
 export default {
 	priority: 500,
-	function: function transformURLs(current: string): string {
-		return fromLines(toLines(current).map((line) => line.replace(URL_RE, (_, url, label) => `<a href="${url}">${label ?? url}</a>`)));
+	function: function transformURLs(current: string, _: Options): string {
+		return fromLines(toLines(current).map((line) => line.replace(URL_RE, (_2, url, label) => `<a href="${url}">${label ?? url}</a>`)));
 	},
 };

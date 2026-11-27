@@ -1,3 +1,4 @@
+import {Options} from '..';
 import {longestCommonPrefix, replaceLines, toLines} from '../utils';
 
 function isListLine(line: string): boolean {
@@ -78,13 +79,13 @@ function transformSingleList(doc: string[]): string {
 
 export default {
 	priority: 0,
-	function: function transformList(current: string): string {
+	function: function transformList(current: string, _: Options): string {
 		const lines = toLines(current);
 		const listStarters = lines
 			.map((line, i) => [line, i] as const)
 			.filter(([line, i]) =>
 				isListLine(line) && (i === 0 || !isListLine(lines[i - 1])));
-		const lists = listStarters.map(([_, i]) => {
+		const lists = listStarters.map(([_2, i]) => {
 			const after = lines.slice(i);
 			const firstRelNonListLine = after.findIndex((line) => !isListLine(line));
 			const relEnd = (firstRelNonListLine === -1 ? after.length : firstRelNonListLine);

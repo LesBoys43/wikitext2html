@@ -10,7 +10,7 @@ export type Options = {
 	strict?: boolean;
 };
 
-const INITIAL_OPTIONS: Options = {strict: true};
+const INITIAL_OPTIONS: Required<Options> = {strict: true};
 
 /**
  * Render MediaWiki Wikitext to HTML
@@ -20,6 +20,6 @@ const INITIAL_OPTIONS: Options = {strict: true};
  * @return {string} The rendered HTML
  */
 export function wikitextToHtml(wikitext: string, options: Options = INITIAL_OPTIONS): string {
-	options = {...INITIAL_OPTIONS, ...options};
-	return runAllTransforms(wikitext, options.strict);
+	const mergedOptions = {...INITIAL_OPTIONS, ...options};
+	return runAllTransforms(wikitext, mergedOptions.strict, mergedOptions);
 }
