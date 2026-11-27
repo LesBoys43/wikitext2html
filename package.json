@@ -1,6 +1,6 @@
 {
   "name": "wikitext2html",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Simple dependency-free MediaWiki Wikitext to HTML renderer",
   "keywords": [
     "wikitext",
