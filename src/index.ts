@@ -2,7 +2,7 @@ import {runAllTransforms} from './transforms';
 
 export type LinkURLTemplateCallbackType = (pageName: string) => string;
 
-export type Options = {
+export interface Options {
 	/**
 	 * Strict mode | Controls behavior when a transform throws an error
 	 *
@@ -25,7 +25,7 @@ export type Options = {
 	 * real MediaWiki site
 	 */
 	linkURLTemplate?: string | LinkURLTemplateCallbackType;
-};
+}
 
 const INITIAL_OPTIONS: Required<Options> = {
 	strict: true,
