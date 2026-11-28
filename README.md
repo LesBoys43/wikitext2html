@@ -3,11 +3,11 @@
 
 # wikitext2html
 
-`wikitext2html` is a simple, dependency-free MediaWiki Wikitext to HTML renderer. It can be use on browser or Node.js.
+`wikitext2html` is a simple, dependency-free MediaWiki Wikitext to HTML renderer. It can be used in a browser or Node.js.
 
 ## Install
 
-Install this package with following command:
+Install this package with the following command:
 
 ```shell
 npm install wikitext2html
@@ -23,7 +23,7 @@ pnpm add wikitext2html
 
 ### Basics
 
-Use `wikitextToHtml()` API render:
+Use the `wikitextToHtml()` API to render:
 
 ```javascript
 import { wikitextToHtml } from "wikitext2html";
@@ -38,7 +38,7 @@ document.body.innerHTML = wikitextToHtml(`
 
 ### Options
 
-You can provide an option object to second argument of `wikitextToHtml()` to customize library behavior, check details about options at [index.d.ts](/dist/index.d.ts)
+You can provide an option object to the second argument of `wikitextToHtml()` to customize library behavior. Check details about options at [index.d.ts](/dist/index.d.ts).
 
 ## Currently supported syntaxes
 
@@ -51,7 +51,7 @@ You can provide an option object to second argument of `wikitextToHtml()` to cus
 - External URL
 - Internal link (configurable template)
 
-### Next (Expected be implemented within 3 versions)
+### Next (Expected to be implemented within 3 versions)
 
 - Tables
 
