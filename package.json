@@ -19,7 +19,8 @@
     "build": "tsup",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
-    "test": "nr build && qunit tests/all.ts"
+    "test": "nr build && qunit tests/all.ts",
+    "prepare": "nr build"
   },
   "devDependencies": {
     "@antfu/ni": "^30.6.0",
