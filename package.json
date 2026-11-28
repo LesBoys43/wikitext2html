@@ -18,9 +18,11 @@
   "scripts": {
     "build": "tsup",
     "lint": "eslint src",
-    "lint:fix": "eslint --fix src"
+    "lint:fix": "eslint --fix src",
+    "test": "nr build && qunit tests/all.ts"
   },
   "devDependencies": {
+    "@antfu/ni": "^30.6.0",
     "@types/jquery": "^4.0.1",
     "@types/jsdom": "^30.0.0",
     "@types/node": "^26.6.6",
