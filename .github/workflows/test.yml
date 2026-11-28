@@ -24,7 +24,7 @@ jobs:
       - name: Setup PNPM
         uses: pnpm/action-setup@v6
         with:
-          run-install: true
+          run_install: true
 
       - name: Run test
         run: |
