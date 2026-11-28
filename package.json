@@ -21,10 +21,16 @@
     "lint:fix": "eslint --fix src"
   },
   "devDependencies": {
+    "@types/jquery": "^4.0.1",
+    "@types/jsdom": "^30.0.0",
     "@types/node": "^26.6.6",
+    "@types/qunit": "^2.19.14",
     "@typescript-eslint/parser": "^8.72.1",
     "eslint": "8.57.0",
     "eslint-config-wikimedia": "^0.32.6",
+    "jquery": "^4.1.0",
+    "jsdom": "^31.0.1",
+    "qunit": "^3.0.0",
     "tsup": "^9.0.0",
     "typescript": "^5.9.3"
   },

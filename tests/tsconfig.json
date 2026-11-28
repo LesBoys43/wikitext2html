@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "types": [
+            "qunit",
+            "jsdom",
+            "jquery"
+        ],
+        "allowImportingTsExtensions": true,
+        "noEmit": true
+    }
+}
