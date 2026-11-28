@@ -43,5 +43,8 @@
     "README.zh.md",
     "LICENSE"
   ],
-  "repository": "github:LesBoys43/wikitext2html"
+  "repository": "github:LesBoys43/wikitext2html",
+  "devEngines": {
+    "packageManager": "pnpm@10"
+  }
 }
